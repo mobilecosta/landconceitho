@@ -1,0 +1,549 @@
+/* Reset Básico e Fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+  max-height: 50px;
+  height: auto;
+  width: auto;
+}
+
+.header nav a {
+    color: #555;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #822628;
+}
+
+/* --- SEÇÃO HERO ATUALIZADA --- */
+.hero {
+    background: linear-gradient(45deg, #a13a3c, #822628);
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 40px auto; /* Aumentei a margem inferior */
+    opacity: 0.9;
+}
+
+/* Contêiner para os botões do Hero */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os botões quebrem a linha em telas menores */
+    gap: 20px; /* Espaçamento entre os botões */
+}
+
+.cta-button {
+    background: #fff;
+    color: #822628;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: inline-flex;
+    align-items: center;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    background-color: #f1f1f1;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* Estilo do novo botão de WhatsApp */
+.whatsapp-button {
+    background: #25D366; /* Cor oficial do WhatsApp */
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px; /* Espaço entre o ícone e o texto */
+    transition: transform 0.3s ease, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-3px);
+    background-color: #1DA851; /* Tom mais escuro no hover */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.whatsapp-icon {
+    height: 24px; /* Tamanho do ícone */
+}
+
+
+/* Seções Padrão */
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+/* Seção de Serviços/Preços */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.pricing-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+.pricing-card h3 { font-size: 1.8rem; color: #822628; margin-bottom: 15px; }
+.pricing-card .description { font-size: 1rem; color: #666; margin-bottom: 25px; flex-grow: 1; }
+.pricing-card .price { margin-bottom: 30px; }
+.price .price-boleto { display: block; font-size: 0.9rem; color: #777; margin-bottom: 5px; }
+.price .price-pix { display: block; font-size: 2rem; font-weight: 700; color: #333; }
+.card-button { background: #822628; color: #fff; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: background-color 0.3s ease; align-self: center; }
+.card-button:hover { background: #661e20; }
+
+/* --- SEÇÃO COMO FUNCIONA ATUALIZADA --- */
+.como-funciona {
+    background-color: #fff; /* Fundo branco para destacar as caixas */
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.step {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    text-align: center;
+    border: 1px solid #e0e0e0; /* Borda sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: #822628; /* Cor da borda em destaque ao passar o mouse */
+}
+
+/* Estilo para o número do passo */
+.step-number {
+    background-color: #822628;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.step h3 {
+    color: #333;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+/* --- SEÇÃO DE FEEDBACKS ATUALIZADA --- */
+.feedbacks {
+    background-color: #fff; /* Fundo branco para destacar os cartões */
+}
+
+.feedback-container {
+    max-width: 800px;
+    margin: auto;
+    position: relative; /* Essencial para posicionar os botões */
+    overflow: hidden; /* Esconde os cards que estão fora da área visível */
+}
+
+.feedback-carousel {
+    display: flex; /* Alinha os cards lado a lado */
+    transition: transform 0.5s ease-in-out; /* Animação de transição */
+}
+
+.feedback-card {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 50px 60px; /* Mais preenchimento interno */
+    text-align: center;
+}
+
+.feedback-card p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.feedback-card .client-name {
+    font-weight: 700;
+    color: #333;
+}
+
+/* Estilo dos botões de navegação do carrossel */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-button:hover {
+    background-color: #822628;
+    color: #fff;
+}
+
+.carousel-button.prev {
+    left: 15px;
+}
+
+.carousel-button.next {
+    right: 15px;
+}
+
+/* Estilo dos indicadores de posição (pontos) */
+.carousel-dots {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #822628; /* Cor do ponto ativo */
+}
+
+/* Contato e Footer */
+.contato { background: #f1f1f1; }
+.contato form { max-width: 500px; margin: 20px auto 0 auto; display: flex; gap: 10px; }
+.contato input[type="email"] { flex-grow: 1; padding: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; }
+.contato button { background: #822628; color: #fff; padding: 15px 25px; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; font-size: 1rem; transition: background-color 0.3s ease; }
+.contato button:hover { background: #661e20; }
+.form-message { margin-top: 15px; padding: 10px; border-radius: 5px; font-weight: 600; display: none; }
+.form-message.success { display: block; background-color: #d4edda; color: #155724; }
+
+.footer { background: #333; color: #fff; text-align: center; padding: 25px 0; }
+
+/* Design Responsivo */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1.1rem; }
+    .header .container { flex-direction: column; gap: 15px; }
+    .header nav { margin-top: 10px; }
+    .features-grid { grid-template-columns: 1fr; }
+    .contato form { flex-direction: column; }
+    section h2 { font-size: 2rem; }
+
+    .carousel-button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .carousel-button.prev { left: 5px; }
+    .carousel-button.next { right: 5px; }
+    .feedback-card { padding: 40px 20px; }
+}
+
+@media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column; /* Botões um embaixo do outro */
+        align-items: stretch; /* Ocupam a largura total */
+    }
+}
+
+/* --- SEÇÃO DIFERENCIAIS ATUALIZADA --- */
+.diferenciais {
+    background-color: #f8f8f8; /* Mantendo um fundo neutro */
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajuste para caber melhor */
+    gap: 30px;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 8px;
+    text-align: center; /* Centralizando o conteúdo */
+    border-top: 4px solid #822628; /* Borda superior em destaque */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- DESIGN MELHORADO PARA A SEÇÃO DE CONTATO --- */
+.contato {
+    background-color: #f8f8f8;
+}
+
+.contato p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.contact-options-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas de tamanho igual */
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contact-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+    text-align: center;
+    border: 1px solid #e9e9e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card-icon {
+    margin-bottom: 20px;
+    background-color: #822628;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-card-icon img {
+    height: 40px; /* Ajusta o tamanho do ícone de WhatsApp */
+}
+.contact-card-icon svg {
+    fill: #fff; /* Pinta o ícone de e-mail de branco */
+}
+
+.contact-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-card-description {
+    color: #666;
+    margin-bottom: 25px;
+    max-width: 300px;
+}
+
+.contact-card-link {
+    background-color: #25D366;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-card-link:hover {
+    background-color: #1DA851;
+    transform: scale(1.05);
+}
+
+/* --- DESIGN SIMPLIFICADO PARA A SEÇÃO DE CONTATO --- */
+.contato {
+    background-color: #f8f8f8;
+    padding-bottom: 120px; /* Mais espaço no final */
+}
+
+.contato p {
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Cartão de contato único */
+.contact-card-single {
+    background: #fff;
+    max-width: 500px; /* Largura máxima do cartão */
+    margin: auto; /* Centraliza o cartão */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #e9e9e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ícone do WhatsApp com cor original */
+.contact-icon-direct {
+    height: 60px; /* Tamanho do ícone */
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.contact-card-single h3 {
+    font-size: 1.7rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-card-single .contact-card-description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 350px;
+}
+
+/* Botão principal de contato */
+.contact-button-main {
+    background-color: #25D366; /* Cor verde do WhatsApp */
+    color: #fff;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-block;
+}
+
+.contact-button-main:hover {
+    background-color: #1DA851;
+    transform: scale(1.05);
+}
+}
